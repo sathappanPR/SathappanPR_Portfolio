@@ -1,0 +1,262 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Add box-sizing */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; 
+    position: relative; /* Make body a positioned container */
+    color: white; /* Default text color */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navigation {
+    list-style-type: none;
+}
+
+.navigation li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Align icons in a column */
+    align-items: flex-start; /* Align icons to the start */
+    position: fixed; /* Position icons absolutely */
+    top: 400px; /* Move icons 20px from the top */
+    left: 10px; /* Move icons 20px from the left */
+    
+}
+
+.social-icons a {
+    margin-bottom: 10px; /* Space between icons */
+}
+
+.social-icons img {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Spacer to push the content below the header */
+.spacer {
+    height: 100px; /* Adjust as needed */
+}
+
+
+
+/* Styling for the popup box */
+.box {
+    /* Existing styles */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust width for smaller screens */
+    max-width: 800px; /* Limit maximum width */
+    padding: 20px;
+    background-color: black; /* Same background color as body */
+    border-radius: 5px;
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow */
+    border: 2px solid;
+}
+
+.box .content img {
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+}
+  
+.box .content {
+    display: flex;
+    align-items: center;
+}
+  
+.box .content p {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px; /* Adjust as needed for spacing between text and arrow */
+}
+
+
+
+.logo-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: -250px; /* Position at the bottom */
+    left: 90%; /* Position at the left */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 0; /* Ensure the logo is above other content */
+}
+
+.logo-container img {
+    max-width: 80%; /* Adjust the size of the logo as needed */
+    max-height:80%; /* Adjust the size of the logo as needed */
+}
+
+@media screen and (max-width: 1200px) {
+    .logo-container {
+    bottom: -310px; /* Position at the bottom */
+    left: 95%; /* Position at the left */
+    
+}
+
+}
+
+
+@media screen and (max-width: 800px) {
+    .logo-container {
+        bottom: -310px; /* Position at the bottom */
+        left: 95%; /* Position at the left */}
+
+    .box .content img {
+        max-width: 50%; /* Ensure the image doesn't overflow */
+        height: 50%; /* Maintain aspect ratio */
+    }
+
+    .social-icons {
+        position: fixed;
+        top: 400px;
+        left: 10px;
+        width: 15%;
+        height: 15%;
+    }
+
+    .box {
+       
+        top: 50%;
+        left: 53%;
+        
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .logo-container {
+       
+        bottom: -320px; /* Position at the bottom */
+        left: 95%; /* Position at the left */}
+
+    .social-icons {
+        position: fixed;
+        top: 400px;
+        left: 10px;
+        width: 20%;
+        height: 20%;
+    }
+
+    .box {
+        top: 50%;
+        left: 53%;
+        
+    }
+}
+
+@media screen and (max-width: 500px) {   
+    .content {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+
+
+    .social-icons {
+        position: fixed;
+        top: 400px;
+        left: 10px;
+        width: 15%;
+        height: 15%;
+    }
+
+    .navigation {
+        font-size: 10px;
+    }
+
+
+    .logo-container {
+       
+        bottom: -300px; /* Position at the bottom */
+        left: 90%; /* Position at the left */}
+    
+    .box {
+        top: 40%;
+        left: 53%;
+    }
+
+}
+
+@media screen and (max-width: 410px) {   
+    .content {
+        font-size: 11px; /* Adjust font size for smaller screens */
+    }
+
+
+    .social-icons {
+        position: fixed;
+        top: 400px;
+        left: 10px;
+        width: 15%;
+        height: 15%;
+    }
+
+    .navigation {
+        font-size: 10px;
+    }
+
+
+    .logo-container {
+       
+        bottom: -300px; /* Position at the bottom */
+        left: 90%; /* Position at the left */}
+
+}
+
+@media screen and (max-width: 365px) {   
+    .content {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+
+
+    .social-icons {
+        position: fixed;
+        top: 450px;
+        left: 1fr;
+        width: 15%;
+        height: 15%;
+    }
+
+    .navigation {
+        font-size: 8px;
+    }
+
+
+    .logo-container {
+       
+        bottom: -300px; /* Position at the bottom */
+        left: 90%; /* Position at the left */}
+
+}

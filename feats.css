@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('back.jpg'); /* Add gradient background */
+    font-family: Arial, sans-serif; /* Example font family */
+    color: #C3C3C3; /* Example text color */
+    z-index: -1;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    background-image: url('back.jpg'); /* Add background image */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5; /* Reduce the opacity of the background */
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.about-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 40px;
+    font-family: "Times New Roman", Times, serif;
+    opacity: 0.5;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.navigation {
+    list-style-type: none;
+    position: relative;
+    z-index: 2; /* Set a very high z-index value */
+}
+
+.navigation li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 400px;
+    left: 20px;
+    z-index: 2; /* Ensure the social icons are behind the navigation */
+}
+
+.social-icons a {
+    margin-bottom: 10px; /* Space between icons */
+}
+
+.social-icons img {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Spacer to push the content below the header */
+.spacer {
+    height: 100px; /* Adjust as needed */
+}
+
+.slider {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background-color: none; /* Set background color to blue */
+}
+
+.cards-container {
+    display: flex;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent cards from wrapping */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #C3C3C3 transparent; /* Firefox */
+    padding-bottom: 10px;
+}
+
+/* Custom scrollbar for WebKit-based browsers (Chrome, Safari) */
+.cards-container::-webkit-scrollbar {
+    height: 5px;
+    
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+    background-color: #C3C3C3; 
+    border-radius: 5px; 
+    
+}
+
+.cards-container::-webkit-scrollbar-track {
+    background: transparent;
+    margin-bottom: 10px;
+    
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 250px; /* Adjust card width as needed */
+    background-color: none; /* Set card background color to black */
+    border: 2px solid white; /* Add border */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    height: 350px; /* Adjust the height as needed */
+    position: relative; /* Required for the curve */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px; /* Adjust margin for better spacing */
+    max-width: 80vw; /* Set a maximum width for the cards */
+    text-align: left; /* Align text to the left */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Adjust this value to control the height of the curve */
+    left: -10px; /* Adjust this value to control the width of the curve */
+    width: 20px; /* Adjust this value to control the width of the curve */
+    height: 20px; /* Adjust this value to control the height of the curve */
+    border-top-left-radius: 50%; /* Make the top-left corner rounded */
+    z-index: -1; /* Ensure the curve is behind the card content */
+}
+
+.card img {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensure the image covers the entire space */
+    border-radius: 30%; /* Make the image round */
+    position: absolute; /* Position the image */
+    top: 20px; /* Adjust this value to position the image */
+    left: 50%; /* Center the image horizontally */
+    transform: translateX(-50%); /* Center the image horizontally */
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 110px 0 20px;
+    color: white;
+    white-space: normal;    
+}
+
+.card p {
+    color: white;
+    margin: 5px; /* Adjust margin for better spacing */
+    white-space: normal; 
+}
+
+.card a {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+@media screen and (max-width: 800px) {   
+    .social-icons {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .social-icons {
+        display: none;
+    }
+
+    .about-content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 50px;
+        font-size: 35px; 
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navigation {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {   
+    .social-icons {
+        display: none;
+    }
+
+    .navigation {
+        font-size: 8px;
+    }
+
+    .about-content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 40px;
+        font-size: 25px; 
+    }
+
+    .cards-container {
+        overflow-x: scroll; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent cards from wrapping */
+    }
+    
+    .card {
+        margin: 0 5px; /* Adjust margin for better spacing */
+        max-width: 80vw; /* Set a maximum width for the cards */
+        text-align: left; /* Align text to the left */
+    }
+
+    .card h2 {
+        white-space: normal; /* Allow text to wrap within the card */
+    }
+
+    .card p {
+        margin: 5px; /* Adjust margin for better spacing */
+        white-space: normal; /* Allow text to wrap within the card */
+    }
+}

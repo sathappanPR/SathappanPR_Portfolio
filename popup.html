@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Guy's</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="navigation">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="project.html">PROJECTS</a></li>
+        <li><a href="Myskill.html">MY SKILLS</a></li>
+        <li><a href="feats.html">FEATS</a></li>
+        <li><a href="#" id="resume-link">RESUME</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons">
+      <a href="https://github.com/sathappanPR" target="_blank"><img src="github.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/sathappanpr2002" target="_blank"><img src="images.png" alt="LinkedIn"></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sathappan5555@gmail.com" target="_blank"><img src="mail.jpg" alt="Hand Symbol"></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- This empty div acts as a spacer -->
+    <div class="spacer"></div>
+  </main>
+      
+  <div class="logo-container">
+    <a href="index.html"><img src="aboutpage.gif" alt="arrow"></a>
+</div>
+
+
+  <div class="box" id="popup-box">
+    <div class="content">
+      <p>Passionate data science enthusiast with a strong foundation in statistical analysis, machine learning, and programming. Eager to apply my analytical skills to solve real-world problems and contribute positively to data-driven decision-making processes. Continuously seeking opportunities to learn and grow in the dynamic field of data science.</p>
+      <img src="my.jpg" alt="Image Description">
+    </div>
+    <div class="popup-arrow"></div>
+  </div>
+  <script>
+    // Function to handle resume download
+    document.getElementById('resume-link').addEventListener('click', function() {
+        // Change 'your-resume.pdf' to the actual path of your resume file
+        const resumeUrl = 'your-resume.pdf';
+        const link = document.createElement('a');
+        link.href = resumeUrl;
+        link.setAttribute('download', 'your-resume.pdf');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+</script>
+</body>
+</html>

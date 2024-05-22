@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sathappan's Portfolio</title>
+  <script>
+    function fun(){
+
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="navigation">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="project.html">PROJECTS</a></li>
+        <li><a href="Myskill.html">MY SKILLS</a></li>
+        <li><a href="feats.html">FEATS</a></li>
+        <li><a href="#" id="resume-link">RESUME</a></li>
+      </ul>
+    </nav>
+    <div class="social-icons">
+      <a href="https://github.com/sathappanPR" target="_blank"><img src="github.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/sathappanpr2002" target="_blank"><img src="images.png" alt="LinkedIn"></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sathappan5555@gmail.com" target="_blank"><img src="mail.jpg" alt="Hand Symbol"></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- This empty div acts as a spacer -->
+    <div class="spacer"></div>
+  </main>
+  
+  <div class="logo-container">
+    <a href="popup.html"><p><img src="mainpage.gif" alt="Fixed Logo"></p></a>   
+  </div>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA63FHJVGzsb_R31SIGXiK0KTr8wPUEqlw",
+      authDomain: "sathappanpr-portfolio.firebaseapp.com",
+      projectId: "sathappanpr-portfolio",
+      storageBucket: "sathappanpr-portfolio.appspot.com",
+      messagingSenderId: "1003497364862",
+      appId: "1:1003497364862:web:9b77a1911a43f1ed77272f"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+
+  
+  <script src="script.js"></script> <!-- Include JavaScript file for interactions -->
+</body>
+</html>

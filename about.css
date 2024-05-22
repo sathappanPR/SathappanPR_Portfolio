@@ -1,0 +1,241 @@
+/* Resetting default margin and padding */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Add box-sizing */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background:#020000; /* Add gradient background */
+    font-family: Arial, sans-serif; /* Example font family */
+    color: #C3C3C3; /* Example text color */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center; /* Center text */
+    font-size: 20px;
+    color: white;
+    background: none;
+}
+
+.about-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 40px;
+    font-family: "Times New Roman", Times, serif;
+    opacity: 0.5;
+    font-size: 36px;
+    font-weight: bold;
+    z-index: 0;
+}
+
+#neural-network {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.navigation {
+    list-style-type: none;
+    position: relative;
+    z-index: 2; /* Set a high z-index value */
+}
+
+.navigation li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 400px;
+    left: 20px;
+    z-index: 2; /* Ensure the social icons are behind the navigation */
+}
+
+.social-icons a {
+    margin-bottom: 10px; /* Space between icons */
+}
+
+.social-icons img {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Spacer to push the content below the header */
+.spacer {
+    height: 100px; /* Adjust as needed */
+}
+
+.logo-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: -250px; /* Position at the bottom */
+    left: 90%; /* Position at the left */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 0; /* Ensure the logo is above other content */
+}
+
+.logo-container img {
+    max-width: 80%; /* Adjust the size of the logo as needed */
+    max-height:80%; /* Adjust the size of the logo as needed */
+}
+
+@media screen and (max-width: 800px) {   
+    .content {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .social-icons {
+        position: absolute;
+        top: 400px;
+        left: 20px;
+        width: 20%;
+        height: 20%;
+    }
+
+    .social-icons img {
+        width: 75%; /* Adjust image width as needed */
+        height: 65%; /* Adjust image height as needed */
+    }
+
+    .social-icons a {
+        margin-bottom: -15px; /* Space between icons */
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 20px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+        width: 50%;
+    }
+
+    .about-content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 50px;
+        font-size: 35px; 
+    }
+
+}
+
+@media screen and (max-width: 500px) {   
+    .content {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+
+    .social-icons {
+        position: absolute;
+        top: 440px;
+        left: 20px;
+        width: 20%;
+        height: 20%;
+    }
+
+    .navigation {
+        font-size: 10px;
+    }
+
+    .about-content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 40px;
+        font-size: 25px; 
+    }
+
+    .logo-container {
+       
+        bottom: -300px; /* Position at the bottom */
+        left: 90%; /* Position at the left */}
+
+}
+
+@media screen and (max-width: 400px) {   
+    .content {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+
+
+
+    .social-icons {
+        position: absolute;
+        top: 460px;
+        left: 20px;
+        width: 20%;
+        height: 20%;
+    }
+
+    .navigation {
+        font-size: 8px;
+    }
+
+    .about-content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 40px;
+        font-size: 25px; 
+    }
+
+    .logo-container {
+       
+        bottom: -300px; /* Position at the bottom */
+        left: 90%; /* Position at the left */}
+
+}
+
+
